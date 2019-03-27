@@ -2,7 +2,7 @@
 
 ## Install via Composer
 ```bash
-composer create-project --prefer-dist vvval/roadrunner-php-mysql-skeleton your_app
+composer create-project --prefer-dist vvval/roadrunner-php-mysql-docker-skeleton your_app
 ```
 
 ## Docker
