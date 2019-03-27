@@ -21,7 +21,7 @@ services:
       - mysql
 
   mysql:
-    container_name: ensconce-mysql
+    container_name: mysql
     image: mysql:5.7.25
     restart: always
     volumes:
