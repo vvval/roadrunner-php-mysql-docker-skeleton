@@ -1,0 +1,53 @@
+version: '3.7'
+
+volumes:
+  data-volume:
+
+services:
+  app:
+    build:
+      context: ./containers/app
+      dockerfile: Dockerfile
+    container_name: app
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src:/var/www/app
+      - data-volume:/var/www
+    tty: true
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
+  mysql:
+    container_name: ensconce-mysql
+    image: mysql:5.7.25
+    restart: always
+    volumes:
+      - ./storage:/var/lib/mysql
+    environment:
+      - MYSQL_USER=${MYSQL_USERNAME}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    ports:
+      - 3306:3306
+
+  rr:
+    build:
+      context: ./containers/rr
+      dockerfile: Dockerfile
+    container_name: rr
+    volumes:
+      - data-volume:/go/src/rr
+    tty: true
+
+  composer:
+    build:
+      context: ./containers/composer
+      dockerfile: Dockerfile
+    container_name: composer
+    volumes:
+      - ./src:/var/www/composer
+    tty: true
