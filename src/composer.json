@@ -1,6 +1,6 @@
 {
-  "name": "vvval/roadrunner-php-mysql-skeleton",
-  "description": "A skeleton app bundle with php/composer + mysql + roadrunner",
+  "name": "vvval/roadrunner-php-mysql-docker-skeleton",
+  "description": "A docker skeleton app bundle with php/composer + mysql + roadrunner",
   "keywords": [
     "roadrunner",
     "docker",

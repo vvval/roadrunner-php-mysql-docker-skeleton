@@ -1,4 +1,4 @@
-# A skeleton app bundle with php/composer + mysql + roadrunner
+# A docker skeleton app bundle with php/composer + mysql + roadrunner
 
 ## Install via Composer
 ```bash
