@@ -1,0 +1,32 @@
+{
+  "name": "vvval/roadrunner-php-mysql-docker-skeleton",
+  "description": "A docker skeleton app bundle with php/composer + mysql + roadrunner",
+  "keywords": [
+    "roadrunner",
+    "docker",
+    "php",
+    "composer",
+    "mysql"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "vvval",
+      "email": "vintsukevich@gmail.com"
+    }
+  ],
+  "scripts": {
+    "rr:serve": [
+      "docker exec app ../rr/rr serve -v -d"
+    ],
+    "http:reset": [
+      "docker exec app ../rr/rr http:reset"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  }
+}
