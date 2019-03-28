@@ -29,4 +29,4 @@ docker exec app ../rr/rr serve -v -d
 > See Makefile for a full list of commands
 
 ## Thanks
-Thanks [nl1215](https://github.com/nl1215/roadrunner-docker-skeleton) and [Sergey Telpuk](https://github.com/sergey-telpuk/roadrunner-docker-skeleton) for their repos
+Thanks [n1215](https://github.com/n1215/roadrunner-docker-skeleton) and [Sergey Telpuk](https://github.com/sergey-telpuk/roadrunner-docker-skeleton) for their repos
