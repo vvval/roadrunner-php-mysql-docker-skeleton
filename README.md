@@ -26,6 +26,10 @@ Run roadrunner server
 docker exec app ../rr/rr serve -v -d
 ```
 
+or via composer:
+```bash
+$ composer rr:serve
+```
 > See Makefile for a full list of commands
 
 ## Thanks
