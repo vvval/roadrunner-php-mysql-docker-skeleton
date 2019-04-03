@@ -9,6 +9,11 @@ services:
       context: ./containers/app
       dockerfile: Dockerfile
     container_name: app
+    environment:
+      - MYSQL_CONNECT=${MYSQL_CONNECT}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USERNAME=${MYSQL_USERNAME}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     ports:
       - 8080:8080
     volumes:
