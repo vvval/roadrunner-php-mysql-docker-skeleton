@@ -23,7 +23,7 @@ docker exec composer composer install
 
 Run roadrunner server
 ```bash
-docker exec app ../rr/rr serve -v -d
+docker exec app ../rr serve -v -d
 ```
 
 or via composer:

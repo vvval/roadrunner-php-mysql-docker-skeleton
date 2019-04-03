@@ -15,7 +15,7 @@ start: ## Start all or c=<name> containers in background
 	docker-compose -f docker-compose.yml up -d $(c)
 
 rr-serve: | start composer-install ##run rr server
-	docker exec app ../rr/rr serve -v -d
+	docker exec app ../rr serve -v -d
 
 composer-install: start ## install dependencies
 	docker exec composer composer install

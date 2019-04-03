@@ -18,10 +18,10 @@
   ],
   "scripts": {
     "rr:serve": [
-      "docker exec app ../rr/rr serve -v -d"
+      "docker exec app ../rr serve -v -d"
     ],
     "http:reset": [
-      "docker exec app ../rr/rr http:reset"
+      "docker exec app ../rr http:reset"
     ]
   },
   "config": {
